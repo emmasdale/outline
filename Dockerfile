@@ -25,4 +25,6 @@ RUN addgroup -g 1001 -S nodejs && \
 USER nodejs
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+
+# Runtime command that executes when "docker run" is called
+CMD yarn start --services=web,websockets,collaboration
