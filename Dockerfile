@@ -24,6 +24,9 @@ RUN addgroup -g 1001 -S nodejs && \
 
 USER nodejs
 
+COPY --chown=nodejs:nodejs Procfile Procfile
+COPY --chown=nodejs:nodejs app.json app.json
+
 EXPOSE 3000
 
 # Runtime command that executes when "docker run" is called
