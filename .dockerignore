@@ -8,8 +8,8 @@ __mocks__
 .eslint*
 .log
 Makefile
-Procfile
-app.json
+# Procfile
+# app.json
 crowdin.yml
 build
 docker-compose.yml

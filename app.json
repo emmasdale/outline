@@ -18,10 +18,5 @@
     "worker": {
       "quantity": 1
     }
-  },
-  "scripts": {
-    "dokku": {
-      "postdeploy": "yarn db:migrate --env production-ssl-disabled"
-    }
   }
 }
