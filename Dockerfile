@@ -37,5 +37,10 @@ VOLUME /var/lib/outline/data
 
 USER nodejs
 
+COPY --chown=nodejs:nodejs Procfile Procfile
+COPY --chown=nodejs:nodejs app.json app.json
+
 EXPOSE 3000
-CMD ["yarn", "start"]
+
+# Runtime command that executes when "docker run" is called
+CMD yarn start --services=web,websockets,collaboration
